@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div id='recipe-bio'>
+    <h1>{{request.user}}'s Recipes</h1>
+    <p>{{recipe.title}}</p>
+    <p>{{recipe.description}}</p>
+    <p>Ingredients:</p>
+    <p>{{recipe.instructions}}</p>
+    <p>Time: {{recipe.time_required}}</p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class='dummy'>
+<div class='display-box'>
+    <h3>Hello Tummy!</h3>
+    <ol>
+        {% for d in data %}
+        <div id='recipes'>
+            <img src="static/img/earl-grey.png" alt="Earl Grey Tea">
+            <li>{{d.title}} | by <a href="/bio/{{d.id}}/">{{d.author}}</a></li>
+            <a href="/recipe/{{d.id}}/"><button id='navb'>My Recipes</button></a>
+        </div>
+        {% endfor %}
+    </ol>
+   
+</div>
+
+<div class='about'>
+    <h1 class='title'>About The Recipes</h1>
+    <p id='p-index'>This website was inspired to have access to recipes during this time in pandmic
+        and always. Our mission is to provide you with the access to recipes that you can
+        get and enjoy from the privacy of your own home. We want to be able to provide access
+        to information that you would not be able to access. We also want to be able to give you
+        access to be able to put your own brand of recipe on our website.
+    </p>
+</div>
+
+</div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div id='bio'>
+    <h1>Hello, Food Enthusiasts</h1>
+    <h3>About Me: </h3>
+
+    <ul>
+        <p>My name is {{bio.name}}</p>
+        <p>{{bio.bio}}</p>
+    </ul>
+
+    <h3>My recipes: </h3>
+    {% for r in recipe %}
+        <ol>
+            <li>
+                <a href="recipe/{{r.id}}/">{{r.title}}</a>
+            </li>
+
+        </ol>
+    {% endfor %}
+</div>
+
+{% endblock %}

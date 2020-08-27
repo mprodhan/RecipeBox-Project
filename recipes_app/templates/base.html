@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'recipes.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <title>Recipe Box</title>
+</head>
+<body>
+    <div class='navbar'>
+        {% block heading %}<h1>Recipe Box</h1>{% endblock %}
+        <a href="/"><button class='nav'>Home</a></button>
+        <a href="/add_author/"><button class='nav'>Add yourself here</a></button>
+        <a href="/add_recipe/"><button class='nav'>Add your recipes here</a></button>
+    </div>
+    {% block body %}{% endblock %}
+</body>
+</html>
